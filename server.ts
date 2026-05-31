@@ -12,6 +12,17 @@ const PORT = parseInt(process.env.PORT || "3000", 10);
 
 app.use(express.json({ limit: '20mb' }));
 
+// Serve static files from the React build
+app.use(express.static(path.join(__dirname, '../dist')));
+
+// Serve index.html for all non-API routes (React Router SPA)
+app.get('*', (req, res) => {
+  // Don't serve index.html for API routes
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
+  }
+});
+
 // Local Database File
 const DB_FILE = path.join(process.cwd(), "db.json");
 
