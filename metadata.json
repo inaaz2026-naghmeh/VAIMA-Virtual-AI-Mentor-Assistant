@@ -1,0 +1,6 @@
+{
+  "name": "Industrial AI Assistant",
+  "description": "Enterprise-grade B2B SaaS operating system for industrial machines featuring multi-agent RAG, continuous voice controls, hands-free diagnostics, and adaptive expert assistance.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

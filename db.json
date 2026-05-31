@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "id": "u-1",
+      "name": "Arash Nazari",
+      "username": "arash_op",
+      "password": "operator123",
+      "role": "OPERATOR",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "email": "arash@industrial-os.io",
+      "contactNumber": "+358 45 123 4567",
+      "checklist": [
+        {
+          "id": "item1",
+          "label": "Operator S7-300 mill check",
+          "desc": "Daily spindle calibration completed G32"
+        },
+        {
+          "id": "item2",
+          "label": "Venting manual review",
+          "desc": "Read high-pressure E-740 safety codes"
+        },
+        {
+          "id": "item3",
+          "label": "Micro-learning Auto Quizzes",
+          "desc": "Complete daily supervisor safety training card"
+        },
+        {
+          "id": "item4",
+          "label": "Acoustic E-740 buzzer check",
+          "desc": "Verify decibel monitor responsiveness"
+        }
+      ],
+      "assignedTutorialDocIds": [
+        "doc-1779787442591"
+      ],
+      "assignedDocumentIds": [
+        "doc-1",
+        "doc-1779787442591",
+        "doc-2"
+      ]
+    },
+    {
+      "id": "u-2",
+      "name": "Nima Ghadiri",
+      "username": "nima_op",
+      "password": "operator123",
+      "role": "OPERATOR",
+      "avatar": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&auto=format&fit=crop&q=80",
+      "email": "nima@industrial-os.io",
+      "contactNumber": "+358 45 443 8910",
+      "checklist": [
+        {
+          "id": "item1",
+          "label": "Coolant temperature review",
+          "desc": "Maintain coolant temperature below 88C"
+        },
+        {
+          "id": "item2",
+          "label": "Manual exhaust checklist",
+          "desc": "Locate physical bypass Red Valve #34"
+        },
+        {
+          "id": "item3",
+          "label": "Safety glove log",
+          "desc": "Verify Class-3 toxic inhalation glove use"
+        },
+        {
+          "id": "chk-1779787371694",
+          "label": "test b",
+          "desc": "Operational safety checklist action"
+        }
+      ],
+      "assignedTutorialDocIds": [],
+      "assignedDocumentIds": [
+        "doc-3"
+      ]
+    },
+    {
+      "id": "u-3",
+      "name": "Sarah Jenkins",
+      "username": "sarah_super",
+      "password": "supervisor123",
+      "role": "SUPERVISOR",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "email": "sarah.jenkins@industrial-os.io",
+      "contactNumber": "+358 40 882 1122"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1",
+      "title": "Pneumatic Safety and Critical Pressure Protocol",
+      "fileName": "Pneumatic_Safety_V4.pdf",
+      "fileSize": 1048576,
+      "accessLevel": "OPERATOR",
+      "uploadedBy": "Sarah Jenkins",
+      "uploadedAt": "2026-05-21T06:29:48.925Z",
+      "content": "PNEUMATIC SAFETY PROTOCOL MANUAL (STANDARD OPERATIONAL GUIDELINE)\n1. Critical System Failures & Pressure Spikes:\n- The standard operational ceiling of the Pneumatic Grid is 6.8 Bar.\n- Any pressure value above 8.5 Bar is categorized as critical.\n- ERROR CODE E-740: High Pneumatic Pressure Spike. Under E-740, the system initiates pneumatic relief venting automatically. If the auto-vent valve jams, the operator must immediately perform a manual bypass trigger using the mechanical red valve #34 situated next to the main auxiliary manifold.\n- High pressure causes system component deformation. Never attempt manual adjusting without shutting down supply.\n2. Emergency Vent Controls:\n- Manual Relief Pull: Red Valve #34 must be rotated 90 degrees counter-clockwise to vent air to atmospheric lines.\n- Response Time Target: Operators have 45 seconds to operate Relief Pull once acoustic alarm is heard.\n- Safe Evacuation Radius: If pressure exceeds 10 Bars, initiate emergency evacuation, establishing a 15-meter zone."
+    },
+    {
+      "id": "doc-2",
+      "title": "Siemens CNC Mill S7-300 Operating Manual",
+      "fileName": "Siemens_CNC_S7300_Ref.pdf",
+      "fileSize": 2097152,
+      "accessLevel": "OPERATOR",
+      "uploadedBy": "Sarah Jenkins",
+      "uploadedAt": "2026-05-23T06:31:28.925Z",
+      "content": "SIEMENS CNC MILLING MACHINE S7-300 UNIT REFERENCE\n1. Spindle Calibration & Orientation:\n- Calibration is required every 12 operating hours. Use command code G32-X0-Y0-S120.\n- If calibration orientation deviates, execute hard-reset sequence: power button off, hold 'Aux Vent' key, power on.\n2. Operational Overheat Protocols:\n- Max allowable temperature: 88 Degrees Celsius.\n- ERROR CODE ERR-CNC-998: Spindle Thermal Overload. Spindle speed is automatically restricted to 120 RPM. Allow coolant flush for 5 minutes.\n- Spindle lock override: Can be unlocked by supervisors only using mechanical bypass keys on auxiliary slot key-bay #2."
+    },
+    {
+      "id": "doc-3",
+      "title": "Chemical Cooling and Fluid Intake Guidelines",
+      "fileName": "Chemical_Cooling_Fluid_Manual.pdf",
+      "fileSize": 8388608,
+      "accessLevel": "SUPERVISOR",
+      "uploadedBy": "Sarah Jenkins",
+      "uploadedAt": "2026-05-25T06:33:08.925Z",
+      "content": "CHEMICAL COOLING UNIT INTENSIONAL SAFETY CODES (Access Restricted: Supervisors Only)\n- Mixing coolant compounds: Add parts coolant base (Formulation S-R204), mixed with pure water in a strict 1:4 ratio. Too high visual cooling ratio leads to chemical precipitates.\n- In case of spills: supervisors must lock isolation valve #7 and initiate chemical vacuum suction immediately.\n- Hazard levels: Hazard category Class-3 toxic inhalation when vaporized under operational pressure exceeding 4 Bars."
+    },
+    {
+      "id": "doc-1779787442591",
+      "title": "1",
+      "fileName": "1",
+      "fileSize": 1,
+      "accessLevel": "OPERATOR",
+      "uploadedBy": "Sarah Jenkins",
+      "uploadedAt": "2026-05-26T09:24:02.591Z",
+      "content": "1",
+      "targetOperatorId": "u-1"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "senderId": "u-3",
+      "senderName": "Sarah Jenkins",
+      "senderRole": "SUPERVISOR",
+      "content": "Hi team. Please review the updated Pneumatic venting protocols in the document upload repository. Operator safety is first.",
+      "createdAt": "2026-05-26T03:33:58.925Z"
+    },
+    {
+      "id": "msg-2",
+      "senderId": "u-1",
+      "senderName": "Arash Nazari",
+      "senderRole": "OPERATOR",
+      "content": "Understood, Sarah. Confirming review done on Pneumatic_Safety_V4.pdf.",
+      "createdAt": "2026-05-26T04:33:58.925Z"
+    }
+  ],
+  "queryLogs": [
+    {
+      "id": "log-1",
+      "userId": "u-1",
+      "userName": "Arash Nazari",
+      "userRole": "OPERATOR",
+      "query": "What manual code represents Spindle Thermal Overload?",
+      "response": "The Siemens CNC Mill S7-300 Operating Manual indicates that Spindle Thermal Overload triggers ERROR CODE ERR-CNC-998 when heat exceeds 88 Degrees Celsius.",
+      "persona": "INTERMEDIATE",
+      "isEmergency": false,
+      "createdAt": "2026-05-26T04:03:58.925Z"
+    }
+  ],
+  "quizzes": [],
+  "quizScores": [],
+  "shiftHandoffs": [],
+  "tutorialAttempts": []
+}
